@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React + 27_2_2024_dricter
+          Learn React + 27_2_2024_dricter +  15_3_2024_dricter
         </a>
       </header>
     </div>
