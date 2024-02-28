@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import  Component  from './componet/componet';
 
@@ -7,7 +7,4 @@ function App() {
     <Component></Component>
   );
 }
-
-
-
 export default App;
