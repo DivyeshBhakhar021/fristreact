@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam quibusdam blanditiis ducimus sed numquam dolorem deleniti aspernatur dolor expedita nostrum, eius earum voluptatibus totam voluptas, quo autem sint similique!</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  a = "Me I Hlep You Sir ??";
+  b = 10 * 10;
+  render() {
+    return (
+      <div>
+        Hello  {this.a}<br></br>
+        Multiply {this.b}
+      </div>
+    );
+  }
 }
 
 export default App;
