@@ -1,10 +1,19 @@
 
 import './App.css';
-import  Component  from './componet/componet';
+import Contry from "./user/components/Contry";
+import City from './user/components/City';
+import ContryFun from './user/ContryFun';
+import CityFun from './user/components/CityFun';
 
 function App() {
   return (
-    <Component></Component>
+    <>
+      <Contry />
+      <City />
+      <ContryFun />
+      <CityFun />
+    </>
+
   );
 }
 export default App;
