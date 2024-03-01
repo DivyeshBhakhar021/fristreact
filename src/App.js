@@ -8,6 +8,7 @@ import Props from './user/components/PropsEx';
 import PropsClass from './user/components/PropsClass'; 
 import Counter from './user/components/CounterFun';
 import CounterClass from './user/components/CounterClass';
+import CitytoContry from  './user/components/CitytoContry'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <PropsClass />
       <Counter/>
       <CounterClass/>
+      <CitytoContry />
     </>
     
 
