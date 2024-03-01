@@ -5,6 +5,7 @@ export default class CounterClass extends Component {
         super(props)
         this.state ={
             count:0
+        
         }
     }
    
