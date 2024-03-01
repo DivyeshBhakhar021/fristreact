@@ -24,6 +24,28 @@
   color: rgb(165, 34, 34);
 }
 
+
+button {
+  background-color: #007bff; /* Default background color */
+  color: #fff; /* Default text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+
+  /* Additional styling */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #0056b3; /* New background color on hover */
+}
+
+
 p{
   color: blue;
   text-align: center;

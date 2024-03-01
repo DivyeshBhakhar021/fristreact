@@ -18,15 +18,14 @@ export default class Contry extends Component {
       timezone: "GMT -8"
     })
   }
-
-
+  
   render() {
     return (
       <>
       <p>Contry</p>
       <h1>My Contry is {this.state.name}</h1>
       <h1>My timezone is {this.state.timezone} </h1>
-      <button onClick={this.Contrychng}>Contrychng</button>
+      <button onClick={this.Contrychng}>Contry chng</button>
       </>
       
     )

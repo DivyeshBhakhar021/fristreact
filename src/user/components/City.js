@@ -25,7 +25,7 @@ export default class City extends Component {
       <p>City</p>
       <h1>My City Name is {this.state.city}</h1>
       <h1>My Time Zone is {this.state.timezone} </h1>
-      <button onClick={this.citychnag}>Contrychng</button>
+      <button onClick={this.citychnag}>Contry City</button>
       </>
     )
   }
