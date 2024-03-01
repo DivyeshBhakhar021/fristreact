@@ -13,7 +13,7 @@ function Counter() {
 
     const counterdataremvo = () =>{
         if (count>0) {
-            setConut(count-1)   
+setConut(count-1)   
         } 
     }
 
