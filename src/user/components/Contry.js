@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import City from './City'
 
 export default class Contry extends Component {
 
@@ -26,6 +27,8 @@ export default class Contry extends Component {
       <h1>My Contry is {this.state.name}</h1>
       <h1>My timezone is {this.state.timezone} </h1>
       <button onClick={this.Contrychng}>Contry chng</button>
+
+      <City countryName={this.state.name}/>
       </>
       
     )

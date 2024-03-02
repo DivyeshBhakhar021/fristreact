@@ -7,7 +7,7 @@ export default class CounterClass extends Component {
             count:0
         
         }
-    }
+    }        
    
     countpuls = () =>{
         this.setState({ count: this.state.count + 1 });

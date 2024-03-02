@@ -8,23 +8,24 @@ import Props from './user/components/PropsEx';
 import PropsClass from './user/components/PropsClass'; 
 import Counter from './user/components/CounterFun';
 import CounterClass from './user/components/CounterClass';
-import CitytoContry from  './user/components/CitytoContry'
+import CitytoContry from  './user/components/CitytoContry';
+import CityFunctiondata from './user/components/CityFunctiondata';
+import Medicines from './user/containers/Medicines'
 
 function App() {
   return (
     <>
-      <Contry />
-      <City />
-      <ContryFun />
-      <CityFun />
-      <Props  text={{
-        name: "Divyesh",
-        student: "yes"
-      }} data="bitkhank"/>
-      <PropsClass />
-      <Counter/>
-      <CounterClass/>
-      <CitytoContry />
+      {/* <Contry /> */}
+      {/* <City /> */}
+      {/* <ContryFun /> */}
+      {/* <CityFun /> */}
+      {/* <Props /> */}
+      {/* <PropsClass /> */}
+      {/* <Counter/> */}
+      {/* <CounterClass/  > */}
+      {/* <CitytoContry initialCity="NewYork" initialCountry="United States" /> */}
+      <Medicines />
+
     </>
     
 
