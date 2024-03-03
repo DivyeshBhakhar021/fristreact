@@ -10,8 +10,6 @@ export default class City extends Component {
             city: 'ahmedabad',
             timezone: 'UTC+5:30'
         }
-
-        
     }
 
     citychnag = () =>{

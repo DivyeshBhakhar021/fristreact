@@ -7,6 +7,37 @@
   pointer-events: none;
 }
 
+
+.information {
+  display: flex;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column; 
+}
+
+.card p.data {
+  margin: 5px 0;
+  transition: color 0.3s ease; 
+  border-bottom: 1px solid #ccc; 
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.data:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,38 +53,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(165, 34, 34);
-}
-
-
-button {
-  background-color: #007bff; /* Default background color */
-  color: #fff; /* Default text color */
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  display: flex;
-  margin: 0 auto;
-  transition: background-color 0.3s ease; /* Smooth transition effect */
-
-  /* Additional styling */
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-/* Hover effect */
-button:hover {
-  background-color: #0056b3; /* New background color on hover */
-}
-
-
-p{
-  color: blue;
-  text-align: center;
-}
-
-h1{
-  color: red;
-  text-align: center;
 }
 
 .App-link {

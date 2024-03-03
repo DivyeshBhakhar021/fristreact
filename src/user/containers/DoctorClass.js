@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Crad from '../components/Crad';
 
 const docterdata = [
@@ -13,7 +13,7 @@ const docterdata = [
         "id": 2,
         "name": "yesh",
         "time": 7,
-        "addres":"kamej" ,
+        "addres":"" ,
         "desc": "hello"
     },
     {
@@ -27,27 +27,31 @@ const docterdata = [
         "id": 4,
         "name": "kano",
         "time": 9,
-        "addres":"vasu" ,
+        "addres":"simda" ,
         "desc": "hello"
     },
 ]
-
-function Doctor() {
+export default class DoctorClass extends Component {
+  render() {
     return (
         <>
             {
-               docterdata.map((v,i)=>(
-                    // <>
-                    // <p>{v.name}</p>
-                    // <p>{v.time}</p>
-                    // </>
-                    
-                    <Crad  info={v} />
+                docterdata.map((v,i)=>(
+                        // <>
+                        // <p>{v.id}</p>
+                        // <p>{v.name}</p>
+                        // <p>{v.time}</p>
+                        // </>
                    
-               )) 
+                    <Crad  info={v} />
+                )) 
             }
         </>
     );
+  }
 }
 
-export default Doctor;
+
+
+
+

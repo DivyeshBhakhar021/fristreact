@@ -10,22 +10,27 @@ import Counter from './user/components/CounterFun';
 import CounterClass from './user/components/CounterClass';
 import CitytoContry from  './user/components/CitytoContry';
 import CityFunctiondata from './user/components/CityFunctiondata';
-import Medicines from './user/containers/Medicines'
+import Medicines from './user/containers/Medicines';
+import Doctor from './user/containers/Doctor';
+import DoctorClass from './user/containers/DoctorClass'
 
 function App() {
   return (
     <>
-      {/* <Contry /> */}
+      {/* <Contry />   */}
       {/* <City /> */}
       {/* <ContryFun /> */}
       {/* <CityFun /> */}
-      {/* <Props /> */}
+      {/* <Props  
+      data="data" /> */}
       {/* <PropsClass /> */}
       {/* <Counter/> */}
       {/* <CounterClass/  > */}
       {/* <CitytoContry initialCity="NewYork" initialCountry="United States" /> */}
       <Medicines />
-
+      <Doctor />
+      {/* <DoctorClass /> */}
+      
     </>
     
 
