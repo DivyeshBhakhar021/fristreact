@@ -1,5 +1,5 @@
 import React from 'react';
-import Crad from '../components/Crad';
+import Crad from '../components/Card';
 
 
 const Medicinesdata = [ 

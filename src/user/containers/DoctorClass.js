@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Crad from '../components/Crad';
+import Card from '../components/Card';
 
 const docterdata = [
     {
@@ -43,7 +43,7 @@ export default class DoctorClass extends Component {
                         // <p>{v.time}</p>
                         // </>
                    
-                    <Crad  info={v} />
+                    <Card  info={v} />
                 )) 
             }
         </>

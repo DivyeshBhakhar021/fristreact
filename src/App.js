@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import Contry from "./user/components/Contry";
 import City from './user/components/City';
 import ContryFun from './user/ContryFun';
@@ -12,7 +13,7 @@ import CitytoContry from  './user/components/CitytoContry';
 import CityFunctiondata from './user/components/CityFunctiondata';
 import Medicines from './user/containers/Medicines';
 import Doctor from './user/containers/Doctor';
-import DoctorClass from './user/containers/DoctorClass'
+import DoctorClass from './user/containers/DoctorClass';
 
 function App() {
   return (
