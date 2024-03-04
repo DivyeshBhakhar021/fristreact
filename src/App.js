@@ -14,6 +14,7 @@ import CityFunctiondata from './user/components/CityFunctiondata';
 import Medicines from './user/containers/Medicines';
 import Doctor from './user/containers/Doctor';
 import DoctorClass from './user/containers/DoctorClass';
+import Lifecycle from  './user/components/Lifecycle';
 
 function App() {
   return (
@@ -28,9 +29,10 @@ function App() {
       {/* <Counter/> */}
       {/* <CounterClass/  > */}
       {/* <CitytoContry initialCity="NewYork" initialCountry="United States" /> */}
-      <Medicines />
+      {/* <Medicines /> */}
       {/* <Doctor />   */}
-      <DoctorClass />
+      {/* <DoctorClass /> */}
+      <Lifecycle  />
       
     </>
     

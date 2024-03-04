@@ -38,7 +38,7 @@ export default class DoctorClass extends Component {
     
   render() {
     return (
-        <>
+        <div  style={{"display":"flex",flexWrap:"wrap"}}>
             {
                 docterdata.map((v,i)=>(
                         // <>
@@ -50,7 +50,7 @@ export default class DoctorClass extends Component {
                     <Card  data={v} />
                 )) 
             }
-        </>
+        </div>
     );
   }
 }
