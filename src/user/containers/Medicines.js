@@ -1,5 +1,5 @@
 import React from 'react';
-import Crad from '../components/Card';
+import Crad from '../components/card/Card';
 
 
 const Medicinesdata = [ 
@@ -62,13 +62,15 @@ const Medicinesdata = [
 ]
 function Medicines() {
     return (
-        <>
+        <div style={{"display":"flex",flexWrap:"wrap"}}>
             {
                 Medicinesdata.map((v,i)=>(
+                    <div >
                    <Crad data={v}/>
+                    </div>
                 ))
             }
-        </>
+        </div>
     );
 }
 

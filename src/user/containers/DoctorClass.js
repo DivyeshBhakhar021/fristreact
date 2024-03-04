@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Card from '../components/Card';
+import Card from '../components/card/Card';
 
 const docterdata = [
     {
-        "id": 1,
-        "name": "Divyesh",
+        "Drid": 1,
+        "Drname": "Divyesh",
         "time": 8,
         "addres":"simda" ,
-        "desc": "hello"
+        "drdesc": "hello"
     },
     {
         "id": 2,
@@ -32,6 +32,10 @@ const docterdata = [
     },
 ]
 export default class DoctorClass extends Component {
+    constructor(props) {
+        super(props);
+    }
+    
   render() {
     return (
         <>
@@ -43,7 +47,7 @@ export default class DoctorClass extends Component {
                         // <p>{v.time}</p>
                         // </>
                    
-                    <Card  info={v} />
+                    <Card  data={v} />
                 )) 
             }
         </>

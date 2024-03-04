@@ -1,22 +1,28 @@
 import React from 'react';
-import style from  './Card.module.css'
+import style from  '../card/Card.module.css'
 
 function Crad({ data }) {
     return (
-        <>
+        <div>
             
             { (
-               <div className="main">
+               <div className={style.main} >
                     <div className={style.card}>
                         <p className={style.data}><b>ID:</b> {data.id}</p>
                         <p className={style.data}><b>Name: </b>{data.name}</p>
                         <p className={style.data}><b>Price:</b> {data.price}</p>
                         <p className={style.data}><b>Expiry:</b> {data.expiry}</p>
                         <p className={style.data}><b>Description:</b> {data.desc}</p>
+
+
+                        <p className={style.data}><b>ID:</b> {data.Drid}</p>
+                        <p className={style.data}><b>Name: </b>{data.Drname}</p>
+                        <p className={style.data}><b>Address:</b> {data.addres}</p> 
+                        <p className={style.data}><b>Description:</b> {data.drdesc}</p> 
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
 

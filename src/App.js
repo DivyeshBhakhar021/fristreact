@@ -3,7 +3,7 @@ import './App.css';
 
 import Contry from "./user/components/Contry";
 import City from './user/components/City';
-import ContryFun from './user/ContryFun';
+import ContryFun from './user/components/ContryFun';
 import CityFun from './user/components/CityFun';
 import Props from './user/components/PropsEx';
 import PropsClass from './user/components/PropsClass'; 
@@ -29,8 +29,8 @@ function App() {
       {/* <CounterClass/  > */}
       {/* <CitytoContry initialCity="NewYork" initialCountry="United States" /> */}
       <Medicines />
-      <Doctor />
-      {/* <DoctorClass /> */}
+      {/* <Doctor />   */}
+      <DoctorClass />
       
     </>
     

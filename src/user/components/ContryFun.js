@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; // Import useState hook
-import CityFunctiondata from './components/CityFunctiondata';
+import CityFunctiondata from './CityFunctiondata';
 
 function CountryFun (){
     const [country, setCountry] = useState('Canada');

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from  './Card.module.css'
+import style from  '../components/card/Card.module.css'
 function CardDoctor({info}) {
     return (
         <div>
