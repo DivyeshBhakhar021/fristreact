@@ -16,6 +16,7 @@ import Doctor from './user/containers/docter/Doctor';
 import DoctorClass from './user/containers/docter/DoctorClass';
 import Lifecycle from  './user/components/Lifecycle';
 import Timer from './user/containers/timer/Timer'
+import TimerFunction from './user/containers/timer/TimerFunction'
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <Doctor />   */}
       {/* <DoctorClass /> */}
       {/* <Lifecycle  /> */}
-      <Timer />
+      {/* <Timer /> */}
+      <TimerFunction />
       
     </>
     
