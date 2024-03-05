@@ -11,6 +11,9 @@ export default class Lifecycle extends Component {
         
     }
  
+    componentDidMount(){
+      console.log("componentDidMountx");
+    }
 
     incremnet(){
         this.setState({count:this.state.count +1})

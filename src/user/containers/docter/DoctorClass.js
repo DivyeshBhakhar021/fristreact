@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from '../components/card/Card';
+import Card from '../../components/card/Card';
 
 const docterdata = [
     {

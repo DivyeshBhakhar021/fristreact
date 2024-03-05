@@ -11,10 +11,11 @@ import Counter from './user/components/CounterFun';
 import CounterClass from './user/components/CounterClass';
 import CitytoContry from  './user/components/CitytoContry';
 import CityFunctiondata from './user/components/CityFunctiondata';
-import Medicines from './user/containers/Medicines';
-import Doctor from './user/containers/Doctor';
-import DoctorClass from './user/containers/DoctorClass';
+import Medicines from './user/containers/medicines/Medicines';
+import Doctor from './user/containers/docter/Doctor';
+import DoctorClass from './user/containers/docter/DoctorClass';
 import Lifecycle from  './user/components/Lifecycle';
+import Timer from './user/containers/timer/Timer'
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <Medicines /> */}
       {/* <Doctor />   */}
       {/* <DoctorClass /> */}
-      <Lifecycle  />
+      {/* <Lifecycle  /> */}
+      <Timer />
       
     </>
     
