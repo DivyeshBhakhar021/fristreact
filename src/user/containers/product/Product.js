@@ -4,26 +4,36 @@ import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from 'react
 function Product(props) {
 
     const [productData, setProduct] = useState([]);
+    const [searchdata,setsearchdata] =useState('');
 
     const getData = async () => {
         const resapons = await fetch("https://fakestoreapi.com/products");
         const data = await resapons.json();
-
-        console.log(data);
         setProduct(data);
-
 
     }
     useEffect(() => {
         getData()
-
     }, []);
 
-    return (
+   const handaldata = (v) => {
+    setsearchdata(v.target.value);
+   }
+
+   const filteredProducts = productData.filter((p) =>
+   p.title.toLowerCase().includes(searchdata.toLowerCase())
+);
+
+
+    return (     
         <div className='container'>
+            <input type="text"
+            placeholder='Search by product'
+            value={searchdata} 
+            onChange={handaldata}/>
             <div className='row'>
                 {
-                    productData.map((v) => (
+                    filteredProducts.map((v) => (
                         <div className='col-md-4 gy-4'>
                             <Card
                                 style={{
