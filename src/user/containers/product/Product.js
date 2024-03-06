@@ -4,7 +4,7 @@ import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from 'react
 function Product(props) {
 
     const [productData, setProduct] = useState([]);
-    const [searchdata,setsearchdata] =useState('');
+    const [searchdata, setsearchdata] = useState('');
 
     const getData = async () => {
         const resapons = await fetch("https://fakestoreapi.com/products");
@@ -16,50 +16,38 @@ function Product(props) {
         getData()
     }, []);
 
-   const handaldata = (v) => {
-    setsearchdata(v.target.value);
-   }
+    const handaldata = (v) => {
+        setsearchdata(v.target.value);
+    }
 
-   const filteredProducts = productData.filter((p) =>
-   p.title.toLowerCase().includes(searchdata.toLowerCase())
-);
+    const filteredProducts = productData.filter((p) =>
+        p.title.toLowerCase().includes(searchdata.toLowerCase())
+    );
 
 
-    return (     
+    return (
         <div className='container'>
             <input type="text"
-            placeholder='Search by product'
-            value={searchdata} 
-            onChange={handaldata}/>
+                placeholder='Search by product'
+                value={searchdata}
+                onChange={handaldata} />
             <div className='row'>
                 {
                     filteredProducts.map((v) => (
                         <div className='col-md-4 gy-4'>
-                            <Card
-                                style={{
-                                    width: '18rem'
-                                }}
-                            >
-                                <img
-                                    height={'250px'}
-                                    alt="Sample"
-                                    src={v.image}
-                                />
+                            <Card className="my-2 shadow-sm" color="primary" outline style={{ width: '18rem' }}>
+                                <img className='p-3' height={'250px'} alt="Sample" src={v.image} />
                                 <CardBody>
                                     <CardTitle tag="h5">
-                                        {v.title.substring(0, 20)}
+                                        {v.title.length > 20 ? v.title.substring(0, 20) + "..." : v.title}
                                     </CardTitle>
-                                    <CardSubtitle
-                                        className="mb-2 text-muted"
-                                        tag="h6"
-
-                                    >
-                                        {v.price}
+                                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                                        ₹ {v.price}
                                     </CardSubtitle>
                                     <CardText>
                                         {v.description.substring(0, 20)}
                                     </CardText>
-                                    <Button>
+                                    <Button color="primary">
                                         Add To Card
                                     </Button>
                                 </CardBody>
