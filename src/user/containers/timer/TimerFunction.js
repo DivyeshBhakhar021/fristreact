@@ -12,28 +12,26 @@ function TimerFunction(props) {
         setTime(new Date());
     };
 
-   // 2
+   
     useEffect(() => {
         console.log("2 componentDidMount");
-        // setTime(new Date())
 
+        //3  4
         const timeRef = setInterval(tick, 1000);
     
-        
-    })
+        //5
+        return () => {
+            console.log("componentWillUnmount");
+            clearInterval(timeRef);
+        };
+    },[]) //4 call (time,props,state)
 
-    //3
-    useEffect(() => {
-        console.log("3 componentDidUpdate");
-    });
-
-
-    
-    return (
+    //2
+    return ( 
         <div className={stlye.container}>
             <div className={stlye.card}>
-                <h1>TimerFunction</h1>
-                <h3>{time.toLocaleString()}</h3>
+                <h1>Watch</h1>
+                <h3 className={stlye.font}>{time.toLocaleTimeString()}</h3>
             </div>
         </div>
     );

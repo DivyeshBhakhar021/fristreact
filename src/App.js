@@ -17,6 +17,8 @@ import DoctorClass from './user/containers/docter/DoctorClass';
 import Lifecycle from  './user/components/Lifecycle';
 import Timer from './user/containers/timer/Timer'
 import TimerFunction from './user/containers/timer/TimerFunction'
+import Product from './user/containers/product/Product';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -36,7 +38,8 @@ function App() {
       {/* <DoctorClass /> */}
       {/* <Lifecycle  /> */}
       {/* <Timer /> */}
-      <TimerFunction />
+      {/* <TimerFunction /> */}
+      <Product />
       
     </>
     

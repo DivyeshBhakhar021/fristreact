@@ -40,6 +40,7 @@ export default class Timer extends Component {
         console.log("5, componentWillUnmount");
         clearInterval(this.timeRef);
     }
+    
 
     //2 it used disapy JSX inDOM it is called whem any state or props are chaned
     render() {
