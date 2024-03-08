@@ -6,12 +6,25 @@ function Product(props) {
     const [productData, setProduct] = useState([]);
     const [searchdata, setsearchdata] = useState('');
     const [sort, setSort] = useState('');
-    const [category, setcategory] = useState('');
+    const [category, setcategory] = useState([]);
+    const [selectdata, setselectdata] = useState('');
 
     const getData = async () => {
         const resapons = await fetch("https://fakestoreapi.com/products");
         const data = await resapons.json();
         setProduct(data);
+
+
+        const uniqudata = [];
+
+        data.map((v) => {
+            if (!uniqudata.includes(v.category)) {
+                uniqudata.push(v.category)
+            }
+
+        })
+        console.log(uniqudata);
+        setcategory(uniqudata)
 
     }
     useEffect(() => {
@@ -39,9 +52,8 @@ function Product(props) {
             }
         });
 
-        if (category) {
-            filteredProducts = sortdata.filter((v) => v.category === category );
-            console.log(filteredProducts);
+        if (selectdata) {
+            filteredProducts = filteredProducts.filter((v) => v.category === selectdata);
         }
 
         return filteredProducts
@@ -52,42 +64,38 @@ function Product(props) {
 
     return (
         <div className='container'>
-            <input type="text"
+             <div className='row'>
+           <div>
+             <input type="text"
                 placeholder='Search by product'
                 value={searchdata}
                 onChange={(event) => setsearchdata(event.target.value)}
-                className='form-control md-3 mt-3' />
+                className='form-control md-3 mt-3' 
+                />
 
-            <select class="form-select mt-4" aria-label="Default select example" onChange={(event) => setSort(event.target.value)}>
+            <div style={{"display":"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"center",marginTop:"20px"}}>
+            <select style={{"width":"300px",border:"1px solid black",borderRadius:"5px"}} class=" mt-4" aria-label="Default select example" onChange={(event) => setSort(event.target.value)}>
                 <option value="0">--Select--</option>
                 <option value="lh">Product: low to high</option>
                 <option value="hl">Product: high to low</option>
                 <option value="a">Product: A - Z</option>
                 <option value="z">Product: Z - A</option>
             </select>
+           
 
+            <br />
 
-            <ButtonToolbar className='mt-4'>
-                <ButtonGroup className="me-2">
-                <Button color="primary" onClick={(event) => setcategory()}>
-                        All
-                    </Button>
-                    <Button color="primary" onClick={(event) => setcategory('electronics')}>
-                        Electroni
-                    </Button>
-                    <Button color="primary" onClick={(event) => setcategory('jewelery')}>
-                        Jewelry
-                    </Button>
-                    <Button color="primary" onClick={(event) => setcategory("men's clothing")}>
-                        Men's cloth
-                    </Button>
-                    <Button color="primary" onClick={(event) => setcategory("women's clothing")}>
-                        Women's cloth
-                    </Button>
-                </ButtonGroup>
-            </ButtonToolbar>
+            <ButtonGroup>
+            <Button style={{backgroundColor : selectdata ? "" : "red"}} color="info" outline onClick={() => setselectdata()} >All</Button>
+                { 
+                    category.map((v) => (
+                        <Button style={{backgroundColor  : selectdata === v ? "red" : ""}} color="info" outline onClick={() => setselectdata(v)} >{v}</Button>
+                    ))
+                }
+            </ButtonGroup>
+            </div>
 
-            <div className='row'>
+            </div>
                 {
                     pdata.map((v) => (
                         <div className='col-md-3 gy-4'>
