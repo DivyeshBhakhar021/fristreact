@@ -1,46 +1,27 @@
 
 import './App.css';
 
-import Contry from "./user/components/Contry";
-import City from './user/components/City';
-import ContryFun from './user/components/ContryFun';
-import CityFun from './user/components/CityFun';
-import Props from './user/components/PropsEx';
-import PropsClass from './user/components/PropsClass'; 
-import Counter from './user/components/CounterFun';
-import CounterClass from './user/components/CounterClass';
-import CitytoContry from  './user/components/CitytoContry';
-import CityFunctiondata from './user/components/CityFunctiondata';
-import Medicines from './user/containers/medicines/Medicines';
-import Doctor from './user/containers/docter/Doctor';
-import DoctorClass from './user/containers/docter/DoctorClass';
-import Lifecycle from  './user/components/Lifecycle';
-import Timer from './user/containers/timer/Timer'
-import TimerFunction from './user/containers/timer/TimerFunction'
-import Product from './user/containers/product/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './user/components/header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Home from './user/containers/home/Home';
+import Product from './user/containers/product/Product';
+import Contect from './user/containers/contect/Contect';
+import Counter from './user/containers/counter/Counter';
 
 function App() {
   return (
     <>
-      {/* <Contry />   */}
-      {/* <City /> */}
-      {/* <ContryFun /> */}
-      {/* <CityFun /> */}
-      {/* <Props  
-      data="data" /> */}
-      {/* <PropsClass /> */}
-      {/* <Counter/> */}
-      {/* <CounterClass/  > */}
-      {/* <CitytoContry initialCity="NewYork" initialCountry="United States" /> */}
-      {/* <Medicines /> */}
-      {/* <Doctor />   */}
-      {/* <DoctorClass /> */}
-      {/* <Lifecycle  /> */}
-      {/* <Timer /> */}
-      {/* <TimerFunction /> */}
-      <Product />
-      
+      <Header />
+      <Routes>
+
+        {/* <Route  exect path='/' element={<Home/>}/>
+        <Route exect path='/product' element={<Product/>}/>
+        <Route exect path='/contect' element={<Contect/>} /> */}
+    
+
+      </Routes>
+      <Counter/>
     </>
     
 
